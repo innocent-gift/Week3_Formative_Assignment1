@@ -1,0 +1,6 @@
+Starting scan session
+File: data_sync, Size: 19904
+File: data_sync_v2, Size: 20952
+File: sync_log.txt, Size: 0
+File: data_sync.c, Size: 519
+File: data_sync_v2.c, Size: 973
