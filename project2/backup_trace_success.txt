@@ -1,0 +1,48 @@
+3096  execve("./backup_tool", ["./backup_tool", "source.txt"], 0x7ffe3a4f66c0 /* 25 vars */) = 0
+3096  brk(NULL)                         = 0x5d6f35870000
+3096  arch_prctl(0x3001 /* ARCH_??? */, 0x7ffd2c12e710) = -1 EINVAL (Invalid argument)
+3096  access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+3096  openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+3096  fstat(3, {st_mode=S_IFREG|0644, st_size=54342, ...}) = 0
+3096  mmap(NULL, 54342, PROT_READ, MAP_PRIVATE, 3, 0) = 0x743a8d571000
+3096  close(3)                          = 0
+3096  openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+3096  read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\300A\2\0\0\0\0\0"..., 832) = 832
+3096  pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+3096  pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848) = 32
+3096  pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0W\222s/x1X\306o\264\363udX\312$"..., 68, 880) = 68
+3096  fstat(3, {st_mode=S_IFREG|0755, st_size=2029592, ...}) = 0
+3096  mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x743a8d56f000
+3096  pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+3096  pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848) = 32
+3096  pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0W\222s/x1X\306o\264\363udX\312$"..., 68, 880) = 68
+3096  mmap(NULL, 2037344, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x743a8d37d000
+3096  mmap(0x743a8d39f000, 1540096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x22000) = 0x743a8d39f000
+3096  mmap(0x743a8d517000, 319488, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19a000) = 0x743a8d517000
+3096  mmap(0x743a8d565000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e7000) = 0x743a8d565000
+3096  mmap(0x743a8d56b000, 13920, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x743a8d56b000
+3096  close(3)                          = 0
+3096  arch_prctl(ARCH_SET_FS, 0x743a8d570540) = 0
+3096  mprotect(0x743a8d565000, 16384, PROT_READ) = 0
+3096  mprotect(0x5d6f0ad8c000, 4096, PROT_READ) = 0
+3096  mprotect(0x743a8d5ac000, 4096, PROT_READ) = 0
+3096  munmap(0x743a8d571000, 54342)     = 0
+3096  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x743a8d570810) = 3097
+3096  wait4(3097,  <unfinished ...>
+3097  mkdir("./backup_vault", 0755)     = 0
+3097  openat(AT_FDCWD, "backup_activity.log", O_WRONLY|O_CREAT|O_APPEND, 0644) = 3
+3097  write(3, "Backup initiated.\n", 18) = 18
+3097  close(3)                          = 0
+3097  openat(AT_FDCWD, "source.txt", O_RDONLY) = 3
+3097  openat(AT_FDCWD, "./backup_vault/backup_copy.txt", O_WRONLY|O_CREAT|O_TRUNC, 0644) = 4
+3097  read(3, "Hello, Systems Programming!\n", 1024) = 28
+3097  write(4, "Hello, Systems Programming!\n", 28) = 28
+3097  read(3, "", 1024)                 = 0
+3097  close(3)                          = 0
+3097  close(4)                          = 0
+3097  exit_group(0)                     = ?
+3097  +++ exited with 0 +++
+3096  <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 3097
+3096  --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=3097, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+3096  exit_group(0)                     = ?
+3096  +++ exited with 0 +++
